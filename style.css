@@ -1,0 +1,197 @@
+/* General settings */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* The header of the site */
+.header {
+    padding: 10px 20px;
+    background-color:rgb(204, 163, 83);
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+  
+.navbar a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease-out;
+}
+
+.navbar a:hover {
+    color: #c5cae9;
+    transform:scale(1.25);
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+}
+  
+.navbar li > a{
+    margin-left: 30px;
+}
+
+.dropdown-button:hover{
+    color: #c5cae9;
+    transform:scale(1.25);
+}
+
+.dropdown-button{
+    margin-left: 30px;
+    color: black;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s ease-out;
+}
+  
+.dropdown-content {
+    overflow:hidden;
+    display: none;
+    position: absolute;
+    background-color:rgb(204, 163, 83);
+    z-index: 1;
+}
+  
+.dropdown-content a {
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content p{
+    margin-top: 20px;
+    text-align: center;
+}
+  
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+
+/* The content of the site */
+.content {
+    background-color:rgb(239, 239, 208);
+    min-height: 101vh;
+    padding: 25px 50px; 
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.description{
+    max-width: 50%;
+    flex-grow: 1;
+    align-self: flex-start;
+}
+
+.description h1{
+    font-size: 60px;
+}
+
+.description p{
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.description ul{
+    margin-top: 20px;
+    margin-left: 20px;
+    list-style: "📌";
+    list-style-position: inside;
+}
+
+.description li{
+    font-size: 20px;
+}
+
+.form{
+    align-self:center;
+    flex-grow: 1; 
+}
+
+.form input{
+    margin: auto;
+    display: block;
+    width: 300px;
+    height: 40px;
+    background: transparent;
+    border-bottom: 1px solid #ff7200;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 40px;
+}
+
+.form form{
+    background:rgb(225, 211, 182);
+    width: fit-content;
+    border-radius: 10px;
+    margin: auto;
+    padding: 25px;
+}
+
+.form input:focus{
+    outline: none;
+}
+
+::placeholder{
+    color: #fff;
+}
+
+.button{
+    margin: auto;
+    display: block;
+    width: 300px;
+    height: 40px;
+    background: rgb(239, 239, 208);
+    border: none;
+    margin-top: 40px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: black;
+    transition: 0.4s ease;
+}
+
+.button:hover{
+    background: #fff;
+    color: #ff7200;
+}
+
+.button a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.form .link{
+    font-size: 17px;
+    padding-top: 20px;
+    text-align: center;
+}
+.form .link a{
+    text-decoration: none;
+    color: rgb(204, 163, 83);
+}
+
+/* The footer of the site */
+.footer{
+    text-align: center;
+    height: 25px;
+    background-color: rgb(219, 208, 208);
+}
+
