@@ -5,8 +5,170 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        /* The description of the content */
+        .description{
+            max-width: 50%;
+            flex-grow: 1;
+            align-self: flex-start;
+        }
+
+        .description h1{
+            font-size: 60px;
+        }
+
+        .description p{
+            margin-top: 30px;
+            font-size: 20px;
+        }
+
+        .description ul{
+            margin-top: 20px;
+            margin-left: 20px;
+            list-style: "📌";
+            list-style-position: inside;
+        }
+
+        .description li{
+            font-size: 20px;
+        }
+
+        /* The form of the content */
+        .form{
+            align-self:center;
+            flex-grow: 1; 
+        }
+
+        form input{
+            margin: auto;
+            display: block;
+            width: 300px;
+            height: 40px;
+            background: transparent;
+            border-bottom: 1px solid #ff7200;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            color: black;
+            font-size: 15px;
+            letter-spacing: 1px;
+            margin-top: 40px;
+        }
+
+        form{
+            background:rgb(225, 211, 182);
+            width: fit-content;
+            border-radius: 10px;
+            margin: auto;
+            padding: 25px;
+        }
+
+        form input:focus{
+            outline: none;
+        }
+
+        ::placeholder{
+            color: black;
+        }
+
+        .button{
+            margin: auto;
+            display: block;
+            width: 300px;
+            height: 40px;
+            background: rgb(239, 239, 208);
+            border: none;
+            margin-top: 40px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            color: black;
+            transition: 0.4s ease;
+        }
+
+        .button:hover{
+            background: #fff;
+            color: #ff7200;
+        }
+
+        .button a{
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        /* The signup link from the form*/
+        form .link-signup{
+            font-size: 17px;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        form .link-signup a{
+            text-decoration: none;
+            color: rgb(204, 163, 83);
+        }
+    </style>
 </head>
 <body>
+    <div class="header">
+        <h1>OurLogo🔥</h1>
+
+        <ul class="navbar">
+            <li><a href="#"><b>HOME</b></a></li>
+            <li><div class="dropdown">
+                <div class="dropdown-button"><b>
+                    PROFILE</b><i class="fa fa-caret-down"></i>
+                </div>
+                <div class="dropdown-content">
+                    <p><b>You are logged as <i>Username</i> 
+                    (mentee)</b></p>
+                </div>
+            </div></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="description">
+            <h1>Welcome to our site!</h1>
+            <p> Our mentoring site connects individuals seeking 
+                <b>guidance and support</b> with <b>experienced mentors</b> in 
+                their desired field. Whether you are just 
+                starting out in your career or looking to 
+                make a change, our platform allows you to 
+                find a mentor who can provide valuable insights, 
+                advice, and support to help you achieve your 
+                goals. Our mentors are industry professionals 
+                with a wealth of knowledge and experience to 
+                share.
+            </p>
+            <p> The site provides a <b>large variety of fields</b>
+                suitable for any type of experience you have:
+            </p>
+            <ul>
+                <li>Career advisers</li>
+                <li>Entrepreneurial mentoring</li>
+                <li>Personal development mentoring</li>
+                <li>Leadership experts</li>
+                <li>Technical mentoring specialists</li>
+                <li>Creative mentoring</li>
+                <li>Health and wellness mentoring</li>
+            </ul>
+        </div>
+
+        <div class="form">
+            <form>
+                <button style="margin-top: 0px;" class="button"><a href="signup-mentor.html">Become a mentor</a></button>
+                <button style="margin-top: 30px;" class="button"><a href="search-mentor.html">Search for a mentor</a></button>
+            </form>
+        </div>
+    </div>
     
+    <div class="footer">
+        <p>&copy; 2023 Our Company</p>
+    </div> 
 </body>
 </html>
