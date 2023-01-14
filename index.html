@@ -41,7 +41,66 @@
             align-self:center;
             flex-grow: 1; 
         }
-        
+
+        form input{
+            margin: auto;
+            display: block;
+            width: 300px;
+            height: 40px;
+            background: transparent;
+            border-bottom: 1px solid #ff7200;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            color: black;
+            font-size: 15px;
+            letter-spacing: 1px;
+            margin-top: 40px;
+        }
+
+        form{
+            background:rgb(225, 211, 182);
+            width: fit-content;
+            border-radius: 10px;
+            margin: auto;
+            padding: 25px;
+        }
+
+        form input:focus{
+            outline: none;
+        }
+
+        ::placeholder{
+            color: black;
+        }
+
+        .button{
+            margin: auto;
+            display: block;
+            width: 300px;
+            height: 40px;
+            background: rgb(239, 239, 208);
+            border: none;
+            margin-top: 40px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            color: black;
+            transition: 0.4s ease;
+        }
+
+        .button:hover{
+            background: #fff;
+            color: #ff7200;
+        }
+
+        .button a{
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        /* The signup link from the form*/
         form .link-signup{
             font-size: 17px;
             padding-top: 20px;
@@ -59,7 +118,7 @@
         <h1>OurLogo🔥</h1>
 
         <ul class="navbar">
-            <li><a href="#"><b>HOME</b></a></li>
+            <li><a href="index.html"><b>HOME</b></a></li>
             <li><a href="#"><b>ABOUT</b></a></li>
             <li><div class="dropdown">
                 <div class="dropdown-button"><b>
@@ -112,7 +171,7 @@
                 <button class="button"><a href="#">Login</a></button>
 
                 <p class="link-signup">Don't have an account yet?<br>
-                Sign up <a href="#"> here</a></p>
+                Sign up <a href="signup.html"> here</a></p>
             </form>
         </div>
     </div>

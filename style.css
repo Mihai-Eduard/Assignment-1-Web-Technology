@@ -88,65 +88,6 @@ body{
     flex-direction: row;
 }
 
-/* The form of the content */
-form input{
-    margin: auto;
-    display: block;
-    width: 300px;
-    height: 40px;
-    background: transparent;
-    border-bottom: 1px solid #ff7200;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    color: #fff;
-    font-size: 15px;
-    letter-spacing: 1px;
-    margin-top: 40px;
-}
-
-form{
-    background:rgb(225, 211, 182);
-    width: fit-content;
-    border-radius: 10px;
-    margin: auto;
-    padding: 25px;
-}
-
-form input:focus{
-    outline: none;
-}
-
-::placeholder{
-    color: #fff;
-}
-
-.button{
-    margin: auto;
-    display: block;
-    width: 300px;
-    height: 40px;
-    background: rgb(239, 239, 208);
-    border: none;
-    margin-top: 40px;
-    font-size: 18px;
-    border-radius: 10px;
-    cursor: pointer;
-    color: black;
-    transition: 0.4s ease;
-}
-
-.button:hover{
-    background: #fff;
-    color: #ff7200;
-}
-
-.button a{
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-}
-
 /* The footer of the site */
 .footer{
     text-align: center;
