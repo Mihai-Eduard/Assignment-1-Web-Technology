@@ -5,8 +5,149 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        /* The form of the  */
+        .form{
+            align-self:flex-start;
+            flex-grow: 1; 
+        }
+
+        form input{
+            margin: auto;
+            display: inline;
+            width: 300px;
+            height: 40px;
+            background: transparent;
+            border-bottom: 1px solid #ff7200;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            color: black;
+            font-size: 15px;
+            letter-spacing: 1px;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+        select{
+            margin: auto;
+            display: inline;
+            width: 300px;
+            height: 40px;
+            background: transparent;
+            border-bottom: 1px solid #ff7200;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            color: black;
+            font-size: 15px;
+            letter-spacing: 1px;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+        form{
+            background:rgb(225, 211, 182);
+            width: fit-content;
+            border-radius: 10px;
+            margin: auto;
+            padding: 25px;
+        }
+
+        form input:focus{
+            outline: none;
+        }
+
+        ::placeholder{
+            color: black;
+        }
+
+        .button{
+            margin: auto;
+            display: block;
+            width: 300px;
+            height: 40px;
+            background: rgb(239, 239, 208);
+            border: none;
+            margin-top: 20px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            color: black;
+            transition: 0.4s ease;
+        }
+
+        .button:hover{
+            background: #fff;
+            color: #ff7200;
+        }
+
+        .button a{
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        option{
+            color: black;
+        }
+
+        textarea{
+            margin-top: 40px;
+            background: rgb(239, 239, 208);
+            margin-left: 20px;
+            margin-right: 20px;
+            padding: 20px;
+            font-size: 1rem;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="header">
+        <div class="logo">
+            <img src="logo.png" alt="logo">
+            <h1>Mentoring United</h1>
+       </div> 
+
+        <ul class="navbar">
+            <li><a href="index.html"><b>HOME</b></a></li>
+            <li><div class="dropdown">
+                <div class="dropdown-button"><b>
+                    PROFILE</b><i class="fa fa-caret-down"></i>
+                </div>
+                <div class="dropdown-content">
+                    <p><b>You are logged as <i>Username</i> 
+                        (mentor)</b></p>
+                </div>
+            </div></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="form">
+            <h1 style="text-align: center;">
+                Insert an available date!
+            </h1><br>
+            <form>
+                <input style="width: 150px; margin: 0px;" id="date" type="date" name="date">
+                <button style="width: 150px;" class="button"><a href="main-mentor.html">Insert</a></button>
+            </form>
+
+            <h1 style="text-align: center; margin-top: 60px;">
+                Delete a date already inserted!
+            </h1><br>
+            <form>
+                <input style="width: 150px; margin: 0px;" id="date" type="date" name="date">
+                <button style="width: 150px;" class="button"><a href="main-mentor.html">Delete</a></button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2023 Mentoring United</p>
+    </div> 
 </body>
 </html>
