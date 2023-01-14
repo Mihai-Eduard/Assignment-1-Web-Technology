@@ -75,11 +75,10 @@ body{
 }
   
 .dropdown:hover .dropdown-content {
-display: block;
+    display: block;
 }
 
-
-/* The content of the site */
+/* The content structure of the site */
 .content {
     background-color:rgb(239, 239, 208);
     min-height: 101vh;
@@ -89,38 +88,8 @@ display: block;
     flex-direction: row;
 }
 
-.description{
-    max-width: 50%;
-    flex-grow: 1;
-    align-self: flex-start;
-}
-
-.description h1{
-    font-size: 60px;
-}
-
-.description p{
-    margin-top: 30px;
-    font-size: 20px;
-}
-
-.description ul{
-    margin-top: 20px;
-    margin-left: 20px;
-    list-style: "📌";
-    list-style-position: inside;
-}
-
-.description li{
-    font-size: 20px;
-}
-
-.form{
-    align-self:center;
-    flex-grow: 1; 
-}
-
-.form input{
+/* The form of the content */
+form input{
     margin: auto;
     display: block;
     width: 300px;
@@ -136,7 +105,7 @@ display: block;
     margin-top: 40px;
 }
 
-.form form{
+form{
     background:rgb(225, 211, 182);
     width: fit-content;
     border-radius: 10px;
@@ -144,7 +113,7 @@ display: block;
     padding: 25px;
 }
 
-.form input:focus{
+form input:focus{
     outline: none;
 }
 
@@ -178,20 +147,9 @@ display: block;
     font-weight: bold;
 }
 
-.form .link{
-    font-size: 17px;
-    padding-top: 20px;
-    text-align: center;
-}
-.form .link a{
-    text-decoration: none;
-    color: rgb(204, 163, 83);
-}
-
 /* The footer of the site */
 .footer{
     text-align: center;
     height: 25px;
     background-color: rgb(219, 208, 208);
 }
-

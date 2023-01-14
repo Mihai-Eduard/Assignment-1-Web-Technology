@@ -7,6 +7,52 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        /* The description of the content */
+        .description{
+            max-width: 50%;
+            flex-grow: 1;
+            align-self: flex-start;
+        }
+
+        .description h1{
+            font-size: 60px;
+        }
+
+        .description p{
+            margin-top: 30px;
+            font-size: 20px;
+        }
+
+        .description ul{
+            margin-top: 20px;
+            margin-left: 20px;
+            list-style: "📌";
+            list-style-position: inside;
+        }
+
+        .description li{
+            font-size: 20px;
+        }
+
+        /* The form of the content */
+        .form{
+            align-self:center;
+            flex-grow: 1; 
+        }
+        
+        form .link-signup{
+            font-size: 17px;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        form .link-signup a{
+            text-decoration: none;
+            color: rgb(204, 163, 83);
+        }
+    </style>
 </head>
 <body>
     <div class="header">
@@ -65,7 +111,7 @@
                 <input type="password" name="password" placeholder="Password">
                 <button class="button"><a href="#">Login</a></button>
 
-                <p class="link">Don't have an account yet?<br>
+                <p class="link-signup">Don't have an account yet?<br>
                 Sign up <a href="#"> here</a></p>
             </form>
         </div>
