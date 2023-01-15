@@ -101,6 +101,7 @@ body{
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    overflow-x: auto;
 }
 
 /* The footer of the site */
