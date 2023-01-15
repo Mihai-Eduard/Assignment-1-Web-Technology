@@ -11,60 +11,7 @@
     <style>
         /* The description of the content */
         form input{
-            margin: auto;
-            display: block;
-            width: 300px;
-            height: 40px;
-            background: transparent;
-            border-bottom: 1px solid #ff7200;
-            border-top: none;
-            border-right: none;
-            border-left: none;
-            color: black;
-            font-size: 15px;
-            letter-spacing: 1px;
             margin-top: 40px;
-        }
-
-        form{
-            background:rgb(225, 211, 182);
-            width: fit-content;
-            border-radius: 10px;
-            margin: auto;
-            padding: 25px;
-        }
-
-        form input:focus{
-            outline: none;
-        }
-
-        ::placeholder{
-            color: black;
-        }
-
-        button{
-            margin: auto;
-            display: block;
-            width: 300px;
-            height: 40px;
-            background: rgb(239, 239, 208);
-            border: none;
-            margin-top: 40px;
-            font-size: 18px;
-            border-radius: 10px;
-            cursor: pointer;
-            color: black;
-            transition: 0.4s ease;
-        }
-
-        button:hover{
-            background: #fff;
-        }
-
-        button a{
-            text-decoration: none;
-            color: #000;
-            font-weight: bold;
         }
 
         /* The signup link from the form*/
@@ -79,22 +26,6 @@
             margin: 0 auto;
         }
 
-        .mentee-item{
-            margin-top: 20px;
-            width: 300px;
-            border: 5px solid rgb(204, 163, 83);
-            padding: 10px;
-            margin: auto;
-        }
-
-        .accept:hover{
-            background-color: green;
-        }
-
-        .decline:hover{
-            background-color: red;
-        }
-
         .requests-section{
             padding-right: 10px;
             flex-grow: 0;
@@ -102,47 +33,12 @@
             border-right: 2px solid black;
         }
 
-        .mentee-item .personal-info{
-            display: flex;
+        .requests-section .mentee-item{
+            margin-top: 40px;
         }
 
-        .mentee-item .mentee-name{
-            padding-left: 10px;
-        }
-
-        .mentee-item .mentee-name *{
-            font-weight: normal;
-        }
-
-        .mentee-description{
-            padding-top: 30px;
-        }
-
-        .mentee-description p{
-            border: 1px solid black;
-            padding: 5px
-        }
-
-        .date-section{
-            padding-top: 30px;
-            display: flex
-        }
-
-        .date-section .selected-date{
-            padding-left: 10px;
-            font-weight: normal;
-        }
-
-        .mentee-item button{
-            border: 2px solid black;
-        }
-
-        .accept{
-            margin-top: 15px;
-        }
-
-        .decline{
-            margin-top: 10px
+        a{
+            text-decoration: none;
         }
     </style>
 </head>
@@ -154,7 +50,7 @@
        </div> 
 
         <ul class="navbar">
-            <li><a href="index.html"><b>HOME</b></a></li>
+            <li><a href="main-mentor.html"><b>HOME</b></a></li>
             <li><div class="dropdown">
                 <div class="dropdown-button"><b>
                     PROFILE</b><i class="fa fa-caret-down"></i>
@@ -194,8 +90,60 @@
                     <h3 class="selected-date">📅date</h3>
                 </div>
 
-                <button class="accept"><a href="main-mentee.html">Accept</a></button>
-                <button class="decline"><a href="main-mentee.html">Decline</a></button>
+                <a href="#"><button class="accept" style="margin-top: 15px">Accept</button></a>
+                <a href="#"><button class="decline" style="margin-top: 10px;">Decline</button></a>
+            </div>
+
+            <div class="mentee-item">
+                <div class="personal-info">
+                    <h3>Mentee: </h3>
+                    <div class="mentee-name">
+                        <h3>Full Name</h3>
+                        <h3>@Username</h3>
+                    </div>
+                </div>
+
+                <div class="mentee-description">
+                    <h3>Description:</h3>
+                    <p>This is a description about what I want to learn from 
+                        the mentorate session and why I decided to try to take 
+                        part at an appointment.
+                    </p>
+                </div>
+
+                <div class="date-section">
+                    <h3>Selected Date:</h3>
+                    <h3 class="selected-date">📅date</h3>
+                </div>
+
+                <a href="#"><button class="accept" style="margin-top: 15px">Accept</button></a>
+                <a href="#"><button class="decline" style="margin-top: 10px;">Decline</button></a>
+            </div>
+
+            <div class="mentee-item">
+                <div class="personal-info">
+                    <h3>Mentee: </h3>
+                    <div class="mentee-name">
+                        <h3>Full Name</h3>
+                        <h3>@Username</h3>
+                    </div>
+                </div>
+
+                <div class="mentee-description">
+                    <h3>Description:</h3>
+                    <p>This is a description about what I want to learn from 
+                        the mentorate session and why I decided to try to take 
+                        part at an appointment.
+                    </p>
+                </div>
+
+                <div class="date-section">
+                    <h3>Selected Date:</h3>
+                    <h3 class="selected-date">📅date</h3>
+                </div>
+
+                <a href="#"><button class="accept" style="margin-top: 15px">Accept</button></a>
+                <a href="#"><button class="decline" style="margin-top: 10px;">Decline</button></a>
             </div>
         </div>
 
@@ -222,7 +170,7 @@
                     <h3 class="selected-date">📅date</h3>
                 </div>
 
-                <button class="accept"><a href="main-mentee.html">Enter meeting</a></button>
+                <a href="#"><button>Enter meeting</button></a>
             </div>
             
             <div class="mentee-item">
@@ -247,7 +195,7 @@
                     <h3 class="selected-date">📅date</h3>
                 </div>
 
-                <button class="accept"><a href="main-mentee.html">Enter meeting</a></button>
+                <a href="#"><button>Enter meeting</button></a>
             </div>
 
             <div class="mentee-item">
@@ -272,7 +220,7 @@
                     <h3 class="selected-date">📅date</h3>
                 </div>
 
-                <button class="accept"><a href="main-mentee.html">Enter meeting</a></button>
+                <a href="#"><button>Enter meeting</button></a>
             </div>
 
             <div class="mentee-item">
@@ -297,7 +245,7 @@
                     <h3 class="selected-date">📅date</h3>
                 </div>
 
-                <button class="accept"><a href="main-mentee.html">Enter meeting</a></button>
+                <a href="#"><button>Enter meeting</button></a>
             </div>
 
             <div class="mentee-item">
@@ -322,7 +270,7 @@
                     <h3 class="selected-date">📅date</h3>
                 </div>
 
-                <button class="accept"><a href="main-mentee.html">Enter meeting</a></button>
+                <a href="#"><button>Enter meeting</button></a>
             </div>
 
             <div class="mentee-item">
@@ -347,7 +295,7 @@
                     <h3 class="selected-date">📅date</h3>
                 </div>
 
-                <button class="accept"><a href="main-mentee.html">Enter meeting</a></button>
+                <a href="#"><button>Enter meeting</button></a>
             </div>
 
             <div class="mentee-item">
@@ -372,7 +320,7 @@
                     <h3 class="selected-date">📅date</h3>
                 </div>
 
-                <button class="accept"><a href="main-mentee.html">Enter meeting</a></button>
+                <a href="#"><button>Enter meeting</button></a>
             </div>
         </div>
     </div>
