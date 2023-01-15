@@ -4,33 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Mentor</title>
+    <title>Mentor Appointment</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
         /* The description of the content */
-        .filters{
-            width: 20%;
-            flex-grow: 1;
-            align-items: center;
-        }
-
-        .filters h1{
-            font-size: 60px;
-        }
-
-        .filters p{
-            margin-top: 30px;
-            font-size: 20px;
-        }
-
-        /* The form of the content */
-        .form{
-            align-self:center;
-            flex-grow: 1; 
-        }
-
         form input{
             margin: auto;
             display: block;
@@ -63,7 +42,7 @@
             color: black;
         }
 
-        .button{
+        button{
             margin: auto;
             display: block;
             width: 300px;
@@ -78,93 +57,34 @@
             transition: 0.4s ease;
         }
 
-        .button:hover{
+        button:hover{
             background: #fff;
-            color: #ff7200;
         }
 
-        .button a{
+        button a{
             text-decoration: none;
             color: #000;
             font-weight: bold;
         }
 
         /* The signup link from the form*/
-        form .link-signup{
-            font-size: 17px;
-            padding-top: 20px;
-            text-align: center;
-        }
-
-        form .link-signup a{
-            text-decoration: none;
-            color: rgb(204, 163, 83);
-        }
-
-        .review{
-            display: flex;
-        }
-
-        #slider1{
-            accent-color: #ff7200;
-        }
-
-        .result{
+        .results-section{
             padding-left: 50px;
             flex-grow: 1;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             grid-template-rows: repeat(auto-fit, 350px);
             grid-column-gap: 45px;
             grid-row-gap: 45px;
             margin: 0 auto;
         }
 
-        .result-item{
-            margin: auto;
-            padding: 0px;
-            width: 500px;
-            height: 300px;
-            border: 5px solid rgb(204, 163, 83);
-            border-radius: 5%;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-        }
-
-        .result img{
-            border-radius: 100%;
-            padding-left: 10px;
-            padding-top: 10px;
-            width: 120px;
-            height: 120px;
-            grid-row: 1/2;
-            grid-column: 1/2;
-        }
-
-        .result .personal-info{
-            grid-row: 1/2;
-            grid-column: 2/4;
-        }
-
-        .result .availability{
-            grid-row: 2/3;
-            grid-column: 1/3;
-        }
-
-        li{
-            padding-top: 5px;
-        }
-        
-        .contact{
-            grid-row: 2/3;
-            grid-column: 3/4;
-        }
-
-        .request{
+        .mentee-item{
             margin-top: 20px;
             width: 300px;
             border: 5px solid rgb(204, 163, 83);
+            padding: 10px;
+            margin: auto;
         }
 
         .accept:hover{
@@ -174,13 +94,63 @@
         .decline:hover{
             background-color: red;
         }
+
+        .requests-section{
+            padding-right: 10px;
+            flex-grow: 0;
+            width: fit-content;
+            border-right: 2px solid black;
+        }
+
+        .mentee-item .personal-info{
+            display: flex;
+        }
+
+        .mentee-item .mentee-name{
+            padding-left: 10px;
+        }
+
+        .mentee-item .mentee-name *{
+            font-weight: normal;
+        }
+
+        .mentee-description{
+            padding-top: 30px;
+        }
+
+        .mentee-description p{
+            border: 1px solid black;
+            padding: 5px
+        }
+
+        .date-section{
+            padding-top: 30px;
+            display: flex
+        }
+
+        .date-section .selected-date{
+            padding-left: 10px;
+            font-weight: normal;
+        }
+
+        .mentee-item button{
+            border: 2px solid black;
+        }
+
+        .accept{
+            margin-top: 15px;
+        }
+
+        .decline{
+            margin-top: 10px
+        }
     </style>
 </head>
 <body>
     <div class="header">
         <div class="logo">
             <img src="logo.png" alt="logo">
-            <h1>Mentoring United | Appointments Menu</h1>
+            <h1>Mentoring United | Your Appointments</h1>
        </div> 
 
         <ul class="navbar">
@@ -198,304 +168,211 @@
     </div>
 
     <div class="content" style="padding-left: 10px;">
-        <div class="requests-menu" style="padding-right: 10px; flex-grow: 0; width: fit-content; border-right: 2px solid black;">
-            <div class="form">
-                <h3 style="text-align: center;">
-                    Appointment Requests
-                </h3>
-                <div class="request" style="padding: 10px;">
-                    <div class="person-info" style="display: flex;">
-                        <h3>Mentee: </h1>
-                        <div style="padding-left: 10px;">
-                            <h3 style="font-weight: normal;">Full Name</h3>
-                            <h3 style="font-weight: normal;">@Username</h3>
-                        </div>
+        <div class="requests-section">
+            <h3 style="text-align: center; margin-bottom: 20px;">
+                Appointment Requests
+            </h3>
+            <div class="mentee-item">
+                <div class="personal-info">
+                    <h3>Mentee: </h3>
+                    <div class="mentee-name">
+                        <h3>Full Name</h3>
+                        <h3>@Username</h3>
                     </div>
-                    <div class="description" style="padding-top: 30px;">
-                        <h3>Description:</h3>
-                        <p style="border: 1px solid black; padding: 5px">This is a description about what I want to learn from 
-                            the mentorate session and why I decided to try to take 
-                            part at an appointment.
-                        </p>
-                    </div>
-
-                    <div class="selected-date" style="padding-top: 30px; display: flex">
-                        <h3>Selected Date:</h3>
-                        <h3 style="padding-left: 10px; font-weight: normal;">📅date</h3>
-                    </div>
-
-                    <button class="button accept" style="border: 1px solid black;">
-                        <a href="main-mentee.html">Accept</a>
-                    </button>
-                    <button class="button decline" style="margin-top: 10px; border: 1px solid black;">
-                        <a href="main-mentee.html">Decline</a>
-                    </button>
                 </div>
-                <div class="request" style="padding: 10px;">
-                    <div class="person-info" style="display: flex;">
-                        <h3>Mentee: </h1>
-                        <div style="padding-left: 10px;">
-                            <h3 style="font-weight: normal;">Full Name</h3>
-                            <h3 style="font-weight: normal;">@Username</h3>
-                        </div>
-                    </div>
-                    <div class="description" style="padding-top: 30px;">
-                        <h3>Description:</h3>
-                        <p style="border: 1px solid black; padding: 5px">This is a description about what I want to learn from 
-                            the mentorate session and why I decided to try to take 
-                            part at an appointment.
-                        </p>
-                    </div>
 
-                    <div class="selected-date" style="padding-top: 30px; display: flex">
-                        <h3>Selected Date:</h3>
-                        <h3 style="padding-left: 10px; font-weight: normal;">📅date</h3>
-                    </div>
-
-                    <button class="button accept" style="border: 1px solid black;">
-                        <a href="main-mentee.html">Accept</a>
-                    </button>
-                    <button class="button decline" style="margin-top: 10px; border: 1px solid black;">
-                        <a href="main-mentee.html">Decline</a>
-                    </button>
+                <div class="mentee-description">
+                    <h3>Description:</h3>
+                    <p>This is a description about what I want to learn from 
+                        the mentorate session and why I decided to try to take 
+                        part at an appointment.
+                    </p>
                 </div>
-                <div class="request" style="padding: 10px;">
-                    <div class="person-info" style="display: flex;">
-                        <h3>Mentee: </h1>
-                        <div style="padding-left: 10px;">
-                            <h3 style="font-weight: normal;">Full Name</h3>
-                            <h3 style="font-weight: normal;">@Username</h3>
-                        </div>
-                    </div>
-                    <div class="description" style="padding-top: 30px;">
-                        <h3>Description:</h3>
-                        <p style="border: 1px solid black; padding: 5px">This is a description about what I want to learn from 
-                            the mentorate session and why I decided to try to take 
-                            part at an appointment.
-                        </p>
-                    </div>
 
-                    <div class="selected-date" style="padding-top: 30px; display: flex">
-                        <h3>Selected Date:</h3>
-                        <h3 style="padding-left: 10px; font-weight: normal;">📅date</h3>
-                    </div>
-
-                    <button class="button accept" style="border: 1px solid black;">
-                        <a href="main-mentee.html">Accept</a>
-                    </button>
-                    <button class="button decline" style="margin-top: 10px; border: 1px solid black;">
-                        <a href="main-mentee.html">Decline</a>
-                    </button>
+                <div class="date-section">
+                    <h3>Selected Date:</h3>
+                    <h3 class="selected-date">📅date</h3>
                 </div>
-                <div class="request" style="padding: 10px;">
-                    <div class="person-info" style="display: flex;">
-                        <h3>Mentee: </h1>
-                        <div style="padding-left: 10px;">
-                            <h3 style="font-weight: normal;">Full Name</h3>
-                            <h3 style="font-weight: normal;">@Username</h3>
-                        </div>
-                    </div>
-                    <div class="description" style="padding-top: 30px;">
-                        <h3>Description:</h3>
-                        <p style="border: 1px solid black; padding: 5px">This is a description about what I want to learn from 
-                            the mentorate session and why I decided to try to take 
-                            part at an appointment.
-                        </p>
-                    </div>
 
-                    <div class="selected-date" style="padding-top: 30px; display: flex">
-                        <h3>Selected Date:</h3>
-                        <h3 style="padding-left: 10px; font-weight: normal;">📅date</h3>
-                    </div>
-
-                    <button class="button accept" style="border: 1px solid black;">
-                        <a href="main-mentee.html">Accept</a>
-                    </button>
-                    <button class="button decline" style="margin-top: 10px; border: 1px solid black;">
-                        <a href="main-mentee.html">Decline</a>
-                    </button>
-                </div>
+                <button class="accept"><a href="main-mentee.html">Accept</a></button>
+                <button class="decline"><a href="main-mentee.html">Decline</a></button>
             </div>
         </div>
 
-        <div class="result">
-            <div class="request" style="padding: 10px; margin: auto; width: 280px;">
-                <div class="person-info" style="display: flex;">
-                    <h3>Mentee: </h1>
-                    <div style="padding-left: 10px;">
-                        <h3 style="font-weight: normal;">Full Name</h3>
-                        <h3 style="font-weight: normal;">@Username</h3>
+        <div class="results-section">
+            <div class="mentee-item">
+                <div class="personal-info">
+                    <h3>Mentee: </h3>
+                    <div class="mentee-name">
+                        <h3>Full Name</h3>
+                        <h3>@Username</h3>
                     </div>
                 </div>
-                <div class="description" style="padding-top: 30px;">
+
+                <div class="mentee-description">
                     <h3>Description:</h3>
-                    <p style="border: 1px solid black; padding: 5px">This is a description about what I want to learn from 
+                    <p>This is a description about what I want to learn from 
                         the mentorate session and why I decided to try to take 
                         part at an appointment.
                     </p>
                 </div>
 
-                <div class="selected-date" style="padding-top: 30px; display: flex">
+                <div class="date-section">
                     <h3>Selected Date:</h3>
-                    <h3 style="padding-left: 10px; font-weight: normal;">📅date</h3>
+                    <h3 class="selected-date">📅date</h3>
                 </div>
 
-                <button class="button" style="border: 1px solid black; width: 280px;">
-                    <a href="main-mentee.html">Enter Meet</a>
-                </button>
+                <button class="accept"><a href="main-mentee.html">Enter meeting</a></button>
             </div>
             
-            <div class="request" style="padding: 10px; margin: auto; width: 280px;">
-                <div class="person-info" style="display: flex;">
-                    <h3>Mentee: </h1>
-                    <div style="padding-left: 10px;">
-                        <h3 style="font-weight: normal;">Full Name</h3>
-                        <h3 style="font-weight: normal;">@Username</h3>
+            <div class="mentee-item">
+                <div class="personal-info">
+                    <h3>Mentee: </h3>
+                    <div class="mentee-name">
+                        <h3>Full Name</h3>
+                        <h3>@Username</h3>
                     </div>
                 </div>
-                <div class="description" style="padding-top: 30px;">
+
+                <div class="mentee-description">
                     <h3>Description:</h3>
-                    <p style="border: 1px solid black; padding: 5px">This is a description about what I want to learn from 
+                    <p>This is a description about what I want to learn from 
                         the mentorate session and why I decided to try to take 
                         part at an appointment.
                     </p>
                 </div>
 
-                <div class="selected-date" style="padding-top: 30px; display: flex">
+                <div class="date-section">
                     <h3>Selected Date:</h3>
-                    <h3 style="padding-left: 10px; font-weight: normal;">📅date</h3>
+                    <h3 class="selected-date">📅date</h3>
                 </div>
 
-                <button class="button" style="border: 1px solid black; width: 280px;">
-                    <a href="main-mentee.html">Enter Meet</a>
-                </button>
+                <button class="accept"><a href="main-mentee.html">Enter meeting</a></button>
             </div>
 
-            <div class="request" style="padding: 10px; margin: auto; width: 280px;">
-                <div class="person-info" style="display: flex;">
-                    <h3>Mentee: </h1>
-                    <div style="padding-left: 10px;">
-                        <h3 style="font-weight: normal;">Full Name</h3>
-                        <h3 style="font-weight: normal;">@Username</h3>
+            <div class="mentee-item">
+                <div class="personal-info">
+                    <h3>Mentee: </h3>
+                    <div class="mentee-name">
+                        <h3>Full Name</h3>
+                        <h3>@Username</h3>
                     </div>
                 </div>
-                <div class="description" style="padding-top: 30px;">
+
+                <div class="mentee-description">
                     <h3>Description:</h3>
-                    <p style="border: 1px solid black; padding: 5px">This is a description about what I want to learn from 
+                    <p>This is a description about what I want to learn from 
                         the mentorate session and why I decided to try to take 
                         part at an appointment.
                     </p>
                 </div>
 
-                <div class="selected-date" style="padding-top: 30px; display: flex">
+                <div class="date-section">
                     <h3>Selected Date:</h3>
-                    <h3 style="padding-left: 10px; font-weight: normal;">📅date</h3>
+                    <h3 class="selected-date">📅date</h3>
                 </div>
 
-                <button class="button" style="border: 1px solid black; width: 280px;">
-                    <a href="main-mentee.html">Enter Meet</a>
-                </button>
+                <button class="accept"><a href="main-mentee.html">Enter meeting</a></button>
             </div>
 
-            <div class="request" style="padding: 10px; margin: auto; width: 280px;">
-                <div class="person-info" style="display: flex;">
-                    <h3>Mentee: </h1>
-                    <div style="padding-left: 10px;">
-                        <h3 style="font-weight: normal;">Full Name</h3>
-                        <h3 style="font-weight: normal;">@Username</h3>
+            <div class="mentee-item">
+                <div class="personal-info">
+                    <h3>Mentee: </h3>
+                    <div class="mentee-name">
+                        <h3>Full Name</h3>
+                        <h3>@Username</h3>
                     </div>
                 </div>
-                <div class="description" style="padding-top: 30px;">
+
+                <div class="mentee-description">
                     <h3>Description:</h3>
-                    <p style="border: 1px solid black; padding: 5px">This is a description about what I want to learn from 
+                    <p>This is a description about what I want to learn from 
                         the mentorate session and why I decided to try to take 
                         part at an appointment.
                     </p>
                 </div>
 
-                <div class="selected-date" style="padding-top: 30px; display: flex">
+                <div class="date-section">
                     <h3>Selected Date:</h3>
-                    <h3 style="padding-left: 10px; font-weight: normal;">📅date</h3>
+                    <h3 class="selected-date">📅date</h3>
                 </div>
 
-                <button class="button" style="border: 1px solid black; width: 280px;">
-                    <a href="main-mentee.html">Enter Meet</a>
-                </button>
+                <button class="accept"><a href="main-mentee.html">Enter meeting</a></button>
             </div>
-            <div class="request" style="padding: 10px; margin: auto; width: 280px;">
-                <div class="person-info" style="display: flex;">
-                    <h3>Mentee: </h1>
-                    <div style="padding-left: 10px;">
-                        <h3 style="font-weight: normal;">Full Name</h3>
-                        <h3 style="font-weight: normal;">@Username</h3>
+
+            <div class="mentee-item">
+                <div class="personal-info">
+                    <h3>Mentee: </h3>
+                    <div class="mentee-name">
+                        <h3>Full Name</h3>
+                        <h3>@Username</h3>
                     </div>
                 </div>
-                <div class="description" style="padding-top: 30px;">
+
+                <div class="mentee-description">
                     <h3>Description:</h3>
-                    <p style="border: 1px solid black; padding: 5px">This is a description about what I want to learn from 
+                    <p>This is a description about what I want to learn from 
                         the mentorate session and why I decided to try to take 
                         part at an appointment.
                     </p>
                 </div>
 
-                <div class="selected-date" style="padding-top: 30px; display: flex">
+                <div class="date-section">
                     <h3>Selected Date:</h3>
-                    <h3 style="padding-left: 10px; font-weight: normal;">📅date</h3>
+                    <h3 class="selected-date">📅date</h3>
                 </div>
 
-                <button class="button" style="border: 1px solid black; width: 280px;">
-                    <a href="main-mentee.html">Enter Meet</a>
-                </button>
+                <button class="accept"><a href="main-mentee.html">Enter meeting</a></button>
             </div>
-            <div class="request" style="padding: 10px; margin: auto; width: 280px;">
-                <div class="person-info" style="display: flex;">
-                    <h3>Mentee: </h1>
-                    <div style="padding-left: 10px;">
-                        <h3 style="font-weight: normal;">Full Name</h3>
-                        <h3 style="font-weight: normal;">@Username</h3>
+
+            <div class="mentee-item">
+                <div class="personal-info">
+                    <h3>Mentee: </h3>
+                    <div class="mentee-name">
+                        <h3>Full Name</h3>
+                        <h3>@Username</h3>
                     </div>
                 </div>
-                <div class="description" style="padding-top: 30px;">
+
+                <div class="mentee-description">
                     <h3>Description:</h3>
-                    <p style="border: 1px solid black; padding: 5px">This is a description about what I want to learn from 
+                    <p>This is a description about what I want to learn from 
                         the mentorate session and why I decided to try to take 
                         part at an appointment.
                     </p>
                 </div>
 
-                <div class="selected-date" style="padding-top: 30px; display: flex">
+                <div class="date-section">
                     <h3>Selected Date:</h3>
-                    <h3 style="padding-left: 10px; font-weight: normal;">📅date</h3>
+                    <h3 class="selected-date">📅date</h3>
                 </div>
 
-                <button class="button" style="border: 1px solid black; width: 280px;">
-                    <a href="main-mentee.html">Enter Meet</a>
-                </button>
+                <button class="accept"><a href="main-mentee.html">Enter meeting</a></button>
             </div>
-            <div class="request" style="padding: 10px; margin: auto; width: 280px;">
-                <div class="person-info" style="display: flex;">
-                    <h3>Mentee: </h1>
-                    <div style="padding-left: 10px;">
-                        <h3 style="font-weight: normal;">Full Name</h3>
-                        <h3 style="font-weight: normal;">@Username</h3>
+
+            <div class="mentee-item">
+                <div class="personal-info">
+                    <h3>Mentee: </h3>
+                    <div class="mentee-name">
+                        <h3>Full Name</h3>
+                        <h3>@Username</h3>
                     </div>
                 </div>
-                <div class="description" style="padding-top: 30px;">
+
+                <div class="mentee-description">
                     <h3>Description:</h3>
-                    <p style="border: 1px solid black; padding: 5px">This is a description about what I want to learn from 
+                    <p>This is a description about what I want to learn from 
                         the mentorate session and why I decided to try to take 
                         part at an appointment.
                     </p>
                 </div>
 
-                <div class="selected-date" style="padding-top: 30px; display: flex">
+                <div class="date-section">
                     <h3>Selected Date:</h3>
-                    <h3 style="padding-left: 10px; font-weight: normal;">📅date</h3>
+                    <h3 class="selected-date">📅date</h3>
                 </div>
 
-                <button class="button" style="border: 1px solid black; width: 280px;">
-                    <a href="main-mentee.html">Enter Meet</a>
-                </button>
+                <button class="accept"><a href="main-mentee.html">Enter meeting</a></button>
             </div>
         </div>
     </div>

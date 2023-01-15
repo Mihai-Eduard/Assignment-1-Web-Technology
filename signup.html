@@ -10,7 +10,7 @@
 
     <style>
         /* The form of the  */
-        .form{
+        .form-section{
             align-self:flex-start;
             flex-grow: 1; 
         }
@@ -65,7 +65,7 @@
             color: black;
         }
 
-        .button{
+        button{
             margin: auto;
             display: block;
             width: 300px;
@@ -78,17 +78,11 @@
             cursor: pointer;
             color: black;
             transition: 0.4s ease;
-        }
-
-        .button:hover{
-            background: #fff;
-            color: #ff7200;
-        }
-
-        .button a{
-            text-decoration: none;
-            color: #000;
             font-weight: bold;
+        }
+
+        button:hover{
+            background: #fff;
         }
 
         option{
@@ -109,7 +103,7 @@
     <div class="header">
         <div class="logo">
             <img src="logo.png" alt="logo">
-            <h1>Mentoring United</h1>
+            <h1>Mentoring United | Sign Up</h1>
        </div>
 
         <ul class="navbar">
@@ -126,36 +120,37 @@
     </div>
 
     <div class="content">
-        <div class="form">
+        <div class="form-section">
             <h1 style="text-align: center;">
                 Join our community!
             </h1>
             <form>
-                <input type="firstname" name="firstname" placeholder="First Name">
-                <input type="lastname" name="lastname" placeholder="Last Name"><br>
+                <input type="text" name="firstname" placeholder="First Name" maxlength="20">
+                <input type="text" name="lastname" placeholder="Last Name" maxlength="10"><br>
 
-                <input type="lastname" name="lastname" placeholder="Email"><br>
+                <input type="email" name="email" placeholder="Email"><br>
 
-                <input style="width: 200px;" type="country" name="country" placeholder="Country">
-                <input style="width: 200px;" type="city" name="city" placeholder="City">
-                <input style="width: 200px;" type="zipcode" name="zipcode" placeholder="ZIP Code"><br>
+                <input style="width: 200px;" type="text" name="country" placeholder="Country">
+                <input style="width: 200px;" type="text" name="city" placeholder="City">
+                <input style="width: 200px;" type="text" name="zipcode" placeholder="ZIP Code"><br>
 
                 <input style="width: 75px;" type=none name="" placeholder="Birthdate:" readonly>
-                <input style="width: 150px; margin-left: 0px;" id="date" type="date" name="date">
-                <input style="width: 150px;" type="language" name="language" placeholder="Language">
-                <select style="width: 150px;" id="gender" name="gender">
+                <input style="width: 150px; margin-left: 0px;" type="date" name="date">
+                <input style="width: 150px;" type="text" name="language" placeholder="Language">
+                <select style="width: 150px;" name="gender">
                     <option value="" disabled selected>Gender</option>
-                    <option value="m">Male</option>
-                    <option value="f">Female</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
                 </select><br>
 
                 <textarea name="description" rows="10" cols="40" placeholder="Please insert a short description about yourself."></textarea><br>
 
-                <input style="margin-top: 40px;" type="username" name="username" placeholder="Username"><br>
-                <input type="password" name="password" placeholder="Password"><br>
-                <input type="password" name="passwordconfirm" placeholder="Confirm Password"><br>
-                <button class="button"><a href="main-mentee.html">SIGN UP just as a MENTEE</a></button>
-                <button class="button"><a href="signup-mentor.html">SIGN UP to be a MENTOR</a></button>
+                <input style="margin-top: 40px;" type="text" name="username" placeholder="Username" maxlength="10"><br>
+                <input type="password" name="password" placeholder="Password" minlength="10"><br>
+                <input type="password" name="confirmpassword" placeholder="Confirm Password" minlength="10"><br>
+
+                <button type="submit" formaction="/main-mentee.html">SIGN UP just as a MENTEE</button>
+                <button type="submit" formaction="/signup-mentor.html">SIGN UP to be a MENTOR</button>
             </form>
         </div>
     </div>

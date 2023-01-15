@@ -4,33 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Mentor</title>
+    <title>Mentee Appointments</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
-        /* The description of the content */
-        .filters{
-            width: 20%;
-            flex-grow: 1;
-            align-items: center;
-        }
-
-        .filters h1{
-            font-size: 60px;
-        }
-
-        .filters p{
-            margin-top: 30px;
-            font-size: 20px;
-        }
-
         /* The form of the content */
-        .form{
-            align-self:center;
-            flex-grow: 1; 
-        }
-
         form input{
             margin: auto;
             display: block;
@@ -63,7 +42,7 @@
             color: black;
         }
 
-        .button{
+        button{
             margin: auto;
             display: block;
             width: 300px;
@@ -78,38 +57,17 @@
             transition: 0.4s ease;
         }
 
-        .button:hover{
+        button:hover{
             background: #fff;
-            color: #ff7200;
         }
 
-        .button a{
+        button a{
             text-decoration: none;
             color: #000;
             font-weight: bold;
         }
 
-        /* The signup link from the form*/
-        form .link-signup{
-            font-size: 17px;
-            padding-top: 20px;
-            text-align: center;
-        }
-
-        form .link-signup a{
-            text-decoration: none;
-            color: rgb(204, 163, 83);
-        }
-
-        .review{
-            display: flex;
-        }
-
-        #slider1{
-            accent-color: #ff7200;
-        }
-
-        .result{
+        .results-section{
             padding-left: 50px;
             flex-grow: 1;
             display: grid;
@@ -119,7 +77,7 @@
             margin: 0 auto;
         }
 
-        .result-item{
+        .mentor-item{
             margin: auto;
             padding: 0px;
             width: 500px;
@@ -131,7 +89,7 @@
             grid-template-rows: 1fr 1fr;
         }
 
-        .result img{
+        .mentor-item img{
             border-radius: 100%;
             padding-left: 10px;
             padding-top: 10px;
@@ -141,23 +99,52 @@
             grid-column: 1/2;
         }
 
-        .result .personal-info{
+        .mentor-item .personal-info{
             grid-row: 1/2;
             grid-column: 2/4;
         }
 
-        .result .availability{
+        .mentor-item .availability{
             grid-row: 2/3;
             grid-column: 1/3;
         }
-
+        
+        .mentor-item .contact{
+            grid-row: 2/3;
+            grid-column: 3/4;
+        }
+        
         li{
             padding-top: 5px;
         }
-        
+
+        .personal-info>*{
+            padding-top: 10px;
+        }
+
+        .availability{
+            padding-top: 10px;
+            padding-left: 10px;
+        }
+
+        .availability ul{
+            padding-left: 30px;
+            list-style-type: "📅 ";
+        }
+
         .contact{
-            grid-row: 2/3;
-            grid-column: 3/4;
+            padding-right: 15px;
+            padding-top: 50px;
+        }
+
+        .contact button{
+            width:200px; 
+            border: 2px solid black;
+        }
+
+        .contact a{
+            text-decoration: none;
+            color: black;
         }
     </style>
 </head>
@@ -165,7 +152,7 @@
     <div class="header">
         <div class="logo">
             <img src="logo.png" alt="logo">
-            <h1>Mentoring United</h1>
+            <h1>Mentoring United | Your Appointments</h1>
        </div> 
 
         <ul class="navbar">
@@ -182,119 +169,110 @@
         </ul>
     </div>
 
-    <div class="title">
-        <h1 style="margin: auto; text-align: center; background-color:rgb(239, 239, 208);
-        padding-left: 50px; padding-right: 50px; padding-top: 25px;">Your appointments!</h1>
-    </div>
-
     <div class="content" style="padding-left: 50px;">    
-        <div class="result">
-            <div class="result-item">
-                <img src="mentor1.PNG" alt="mento1">
+        <div class="results-section">
+            <div class="mentor-item">
+                <img src="mentor1.PNG" alt="mentor1">
                 <div class="personal-info">
-                    <h1 style="padding-top: 10px;">Full Name</h1>
-                    <h3 style="padding-top: 10px;">Mentoring Field</h3>
-                    <p style="padding-top: 10px">📌 Location</p>
-                    <p style="padding-top: 10px">Review Score: Number⭐</p>
+                    <h1>Full Name</h1>
+                    <h3>Mentoring Field</h3>
+                    <p>📌Location</p>
+                    <p>Review Score: Number⭐</p>
                 </div>
-                <div style="padding-top: 10px; padding-left: 10px;" class="availability">
-                    <h2>Date: </h2>
-                    <ul style="display: inline-block; padding-left: 30px;">
-                        <li>📅 Date</li>
+
+                <div class="availability">
+                    <h2>Available: </h2>
+                    <ul>
+                        <li>Date</li>
                     </ul>
                 </div>
-                <div style="padding-right: 15px; padding-top: 50px;" class="contact">
-                    <button style="width:210px; border: 5px solid rgb(204, 163, 83);" class="button"><a href="main-mentee.html">Enter The Meeting</a></button>
+
+                <div class="contact">
+                    <button><a href="contact-mentor.html">Enter the meeting</a></button>
                 </div>
             </div>
-            <div class="result-item">
-                <img src="mentor1.PNG" alt="mento1">
+
+            <div class="mentor-item">
+                <img src="mentor1.PNG" alt="mentor1">
                 <div class="personal-info">
-                    <h1 style="padding-top: 10px;">Full Name</h1>
-                    <h3 style="padding-top: 10px;">Mentoring Field</h3>
-                    <p style="padding-top: 10px">📌 Location</p>
-                    <p style="padding-top: 10px">Review Score: Number⭐</p>
+                    <h1>Full Name</h1>
+                    <h3>Mentoring Field</h3>
+                    <p>📌Location</p>
+                    <p>Review Score: Number⭐</p>
                 </div>
-                <div style="padding-top: 10px; padding-left: 10px;" class="availability">
-                    <h2>Date: </h2>
-                    <ul style="display: inline-block; padding-left: 30px;">
-                        <li>📅 Date</li>
+
+                <div class="availability">
+                    <h2>Available: </h2>
+                    <ul>
+                        <li>Date</li>
                     </ul>
                 </div>
-                <div style="padding-right: 15px; padding-top: 50px;" class="contact">
-                    <button style="width:210px; border: 5px solid rgb(204, 163, 83);" class="button"><a href="main-mentee.html">Enter The Meeting</a></button>
+
+                <div class="contact">
+                    <button><a href="contact-mentor.html">Enter the meeting</a></button>
                 </div>
             </div>
-            <div class="result-item">
-                <img src="mentor1.PNG" alt="mento1">
+
+            <div class="mentor-item">
+                <img src="mentor1.PNG" alt="mentor1">
                 <div class="personal-info">
-                    <h1 style="padding-top: 10px;">Full Name</h1>
-                    <h3 style="padding-top: 10px;">Mentoring Field</h3>
-                    <p style="padding-top: 10px">📌 Location</p>
-                    <p style="padding-top: 10px">Review Score: Number⭐</p>
+                    <h1>Full Name</h1>
+                    <h3>Mentoring Field</h3>
+                    <p>📌Location</p>
+                    <p>Review Score: Number⭐</p>
                 </div>
-                <div style="padding-top: 10px; padding-left: 10px;" class="availability">
-                    <h2>Date: </h2>
-                    <ul style="display: inline-block; padding-left: 30px;">
-                        <li>📅 Date</li>
+
+                <div class="availability">
+                    <h2>Available: </h2>
+                    <ul>
+                        <li>Date</li>
                     </ul>
                 </div>
-                <div style="padding-right: 15px; padding-top: 50px;" class="contact">
-                    <button style="width:210px; border: 5px solid rgb(204, 163, 83);" class="button"><a href="main-mentee.html">Enter The Meeting</a></button>
+
+                <div class="contact">
+                    <button><a href="contact-mentor.html">Enter the meeting</a></button>
                 </div>
             </div>
-            <div class="result-item">
-                <img src="mentor1.PNG" alt="mento1">
+
+            <div class="mentor-item">
+                <img src="mentor1.PNG" alt="mentor1">
                 <div class="personal-info">
-                    <h1 style="padding-top: 10px;">Full Name</h1>
-                    <h3 style="padding-top: 10px;">Mentoring Field</h3>
-                    <p style="padding-top: 10px">📌 Location</p>
-                    <p style="padding-top: 10px">Review Score: Number⭐</p>
+                    <h1>Full Name</h1>
+                    <h3>Mentoring Field</h3>
+                    <p>📌Location</p>
+                    <p>Review Score: Number⭐</p>
                 </div>
-                <div style="padding-top: 10px; padding-left: 10px;" class="availability">
-                    <h2>Date: </h2>
-                    <ul style="display: inline-block; padding-left: 30px;">
-                        <li>📅 Date</li>
+
+                <div class="availability">
+                    <h2>Available: </h2>
+                    <ul>
+                        <li>Date</li>
                     </ul>
                 </div>
-                <div style="padding-right: 15px; padding-top: 50px;" class="contact">
-                    <button style="width:210px; border: 5px solid rgb(204, 163, 83);" class="button"><a href="main-mentee.html">Enter The Meeting</a></button>
+
+                <div class="contact">
+                    <button><a href="contact-mentor.html">Enter the meeting</a></button>
                 </div>
             </div>
-            <div class="result-item">
-                <img src="mentor1.PNG" alt="mento1">
+
+            <div class="mentor-item">
+                <img src="mentor1.PNG" alt="mentor1">
                 <div class="personal-info">
-                    <h1 style="padding-top: 10px;">Full Name</h1>
-                    <h3 style="padding-top: 10px;">Mentoring Field</h3>
-                    <p style="padding-top: 10px">📌 Location</p>
-                    <p style="padding-top: 10px">Review Score: Number⭐</p>
+                    <h1>Full Name</h1>
+                    <h3>Mentoring Field</h3>
+                    <p>📌Location</p>
+                    <p>Review Score: Number⭐</p>
                 </div>
-                <div style="padding-top: 10px; padding-left: 10px;" class="availability">
-                    <h2>Date: </h2>
-                    <ul style="display: inline-block; padding-left: 30px;">
-                        <li>📅 Date</li>
+
+                <div class="availability">
+                    <h2>Available: </h2>
+                    <ul>
+                        <li>Date</li>
                     </ul>
                 </div>
-                <div style="padding-right: 15px; padding-top: 50px;" class="contact">
-                    <button style="width:210px; border: 5px solid rgb(204, 163, 83);" class="button"><a href="main-mentee.html">Enter The Meeting</a></button>
-                </div>
-            </div>
-            <div class="result-item">
-                <img src="mentor1.PNG" alt="mento1">
-                <div class="personal-info">
-                    <h1 style="padding-top: 10px;">Full Name</h1>
-                    <h3 style="padding-top: 10px;">Mentoring Field</h3>
-                    <p style="padding-top: 10px">📌 Location</p>
-                    <p style="padding-top: 10px">Review Score: Number⭐</p>
-                </div>
-                <div style="padding-top: 10px; padding-left: 10px;" class="availability">
-                    <h2>Date: </h2>
-                    <ul style="display: inline-block; padding-left: 30px;">
-                        <li>📅 Date</li>
-                    </ul>
-                </div>
-                <div style="padding-right: 15px; padding-top: 50px;" class="contact">
-                    <button style="width:210px; border: 5px solid rgb(204, 163, 83);" class="button"><a href="main-mentee.html">Enter The Meeting</a></button>
+
+                <div class="contact">
+                    <button><a href="contact-mentor.html">Enter the meeting</a></button>
                 </div>
             </div>
         </div>
