@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Mentor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        /* The description of the content */
+        .filters{
+            width: 20%;
+            flex-grow: 1;
+            align-items: center;
+        }
+
+        .filters h1{
+            font-size: 60px;
+        }
+
+        .filters p{
+            margin-top: 30px;
+            font-size: 20px;
+        }
+
+        /* The form of the content */
+        .form{
+            align-self:center;
+            flex-grow: 1; 
+        }
+
+        form input{
+            margin: auto;
+            display: block;
+            width: 300px;
+            height: 40px;
+            background: transparent;
+            border-bottom: 1px solid #ff7200;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            color: black;
+            font-size: 15px;
+            letter-spacing: 1px;
+            margin-top: 40px;
+        }
+
+        form{
+            background:rgb(225, 211, 182);
+            width: fit-content;
+            border-radius: 10px;
+            margin: auto;
+            padding: 25px;
+        }
+
+        form input:focus{
+            outline: none;
+        }
+
+        ::placeholder{
+            color: black;
+        }
+
+        .button{
+            margin: auto;
+            display: block;
+            width: 300px;
+            height: 40px;
+            background: rgb(239, 239, 208);
+            border: none;
+            margin-top: 40px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            color: black;
+            transition: 0.4s ease;
+        }
+
+        .button:hover{
+            background: #fff;
+            color: #ff7200;
+        }
+
+        .button a{
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        /* The signup link from the form*/
+        form .link-signup{
+            font-size: 17px;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        form .link-signup a{
+            text-decoration: none;
+            color: rgb(204, 163, 83);
+        }
+
+        .review{
+            display: flex;
+        }
+
+        #slider1{
+            accent-color: #ff7200;
+        }
+
+        .result-item{
+            margin: auto;
+            padding: 0px;
+            width: 500px;
+            height: 300px;
+            border: 5px solid rgb(204, 163, 83);
+            border-radius: 5%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+
+        .result-item img{
+            border-radius: 100%;
+            padding-left: 10px;
+            padding-top: 10px;
+            width: 120px;
+            height: 120px;
+            grid-row: 1/2;
+            grid-column: 1/2;
+        }
+
+        .result-item .personal-info{
+            grid-row: 1/2;
+            grid-column: 2/4;
+        }
+
+        .result-item .availability{
+            grid-row: 2/3;
+            grid-column: 1/3;
+        }
+
+        li{
+            padding-top: 5px;
+        }
+        
+        .contact{
+            grid-row: 2/3;
+            grid-column: 3/4;
+        }
+
+        textarea{
+            margin-top: 40px;
+            background: rgb(239, 239, 208);
+            margin-left: 20px;
+            margin-right: 20px;
+            padding: 20px;
+            font-size: 1rem;
+        }
+
+        #date{
+            margin-top: 40px;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="logo.png" alt="logo">
+            <h1>Mentoring United</h1>
+       </div> 
+
+        <ul class="navbar">
+            <li><a href="index.html"><b>HOME</b></a></li>
+            <li><div class="dropdown">
+                <div class="dropdown-button"><b>
+                    PROFILE</b><i class="fa fa-caret-down"></i>
+                </div>
+                <div class="dropdown-content">
+                    <p><b>You are logged as <i>Username</i> 
+                        (mentor/mentee)</b></p>
+                </div>
+            </div></li>
+        </ul>
+    </div>
+
+    <div class="content" style="padding-left: 10px;">
+        <div class="" style="padding-right: 10px; flex-grow: 0; width: fit-content; border-right: 2px solid black;">
+            <div class="result-item">
+                <img src="mentor1.PNG" alt="mento1">
+                <div class="personal-info">
+                    <h1 style="padding-top: 10px;">Full Name</h1>
+                    <h3 style="padding-top: 10px;">Mentoring Field</h3>
+                    <p style="padding-top: 10px">📌 Location</p>
+                    <p style="padding-top: 10px">Review Score: Number⭐</p>
+                </div>
+                <div style="padding-top: 10px; padding-left: 10px; display: flex;" class="availability">
+                    <h2>Available: </h2>
+                    <ul style="display: inline-block; padding-left: 30px;">
+                        <li>📅 Date1</li>
+                        <li>📅 Date2</li>
+                        <li>📅 Date3</li>
+                    </ul>
+                </div>
+                <div style="padding-right: 15px; padding-top: 50px;" class="contact">
+                    <button style="width:200px; border: 5px solid rgb(204, 163, 83);" class="button"><a href="main-mentee.html">Contact mentor</a></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="request" style="flex-grow: 1;">
+            <div class="form" style="padding-left: 50px;">
+                <h1 style="text-align: center;">
+                    Contact your mentor!
+                </h1>
+                <form>
+                    <textarea name="description" rows="10" cols="40" placeholder="Please describe the purpose of the meeting."></textarea><br>
+                    
+                    <select style="width: 180px;" id="date" name="gender">
+                        <option value="" disabled selected>Select an available date</option>
+                        <option value="date1">Date1</option>
+                        <option value="date1">Date1</option>
+                        <option value="date1">Date1</option>
+                    </select><br>
+
+                    <button class="button"><a href="signup-mentor.html">Send request</a></button>   
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>&copy; 2023 Mentoring United</p>
+    </div> 
+</body>
+</html>
