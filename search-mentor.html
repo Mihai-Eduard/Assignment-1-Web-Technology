@@ -11,38 +11,39 @@
     <style>
         .filters-section{
             width: fit-content;
-            padding-right: 10px;
+            padding-right: 0.5rem;
             align-items: center;
             border-right: 2px solid black;
         }
 
         /* The form of the content */
         form input{
-            margin-top: 40px;
+            margin-top: 2rem;
         }
 
         /* The signup link from the form*/
         .results-section{
-            padding-left: 50px;
+            padding-left: 1.5rem;
             flex-grow: 1;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-            grid-column-gap: 45px;
-            grid-row-gap: 45px;
+            grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+            grid-column-gap: 1rem;
+            grid-row-gap: 1rem;
             margin: 0 auto;
         }
         
         li{
-            padding-top: 5px;
+            padding-top: 0.2rem;
         }
 
         .contact{
-            padding-right: 15px;
-            padding-top: 50px;
+            padding-right: 0.75rem;
+            padding-top: 2rem;
         }
 
         .contact button{
-            width:200px; 
+            width:10rem;
+            font-size: 1rem; 
             border: 5px solid rgb(204, 163, 83);
         }
 
@@ -73,23 +74,23 @@
         </ul>
     </div>
 
-    <div class="content" style="padding-left: 10px;">
+    <div class="content" style="padding-left: 0.5rem;">
         <div class="filters-section">
             <h3 style="text-align: center;">
                 Search Filters
             </h3>
-            <form style="margin-top: 20px;">
-                <input style="width: 150px; margin-top: 0px;" type="text" name="firstname" placeholder="Job Category">
-                <input style="width: 150px; margin-top: 10px;" type="text" name="company" placeholder="Company">
-                <input style="width: 150px; margin-top: 10px;" type="text" name="location" placeholder="Location">
+            <form style="margin-top: 1rem;">
+                <input style="width: 8rem; margin-top: 0px;" type="text" name="firstname" placeholder="Job Category">
+                <input style="width: 8rem; margin-top: 0.5rem;" type="text" name="company" placeholder="Company">
+                <input style="width: 8rem; margin-top: 0.5rem;" type="text" name="location" placeholder="Location">
 
-                <input style="width: 120px;" type="text" name="skill1" placeholder="Skill1">
-                <input style="width: 120px; margin-top: 0px;" type="text" name="skill2" placeholder="Skill2">
-                <input style="width: 120px; margin-top: 0px;" type="text" name="skill3" placeholder="Skill3">
+                <input style="width: 6rem;" type="text" name="skill1" placeholder="Skill1">
+                <input style="width: 6rem; margin-top: 0px;" type="text" name="skill2" placeholder="Skill2">
+                <input style="width: 6rem; margin-top: 0px;" type="text" name="skill3" placeholder="Skill3">
 
                 <div class="review" style="display: flex;">
-                    <input style="width: 100px; border-bottom: none;" type="text" name="" placeholder="Score (1-5)" readonly>
-                    <input style="width: 120px; accent-color: #ff7200;" type="range" list="tickmarks" min="1", max="5"/>
+                    <input style="width: 5rem; border-bottom: none;" type="text" name="" placeholder="Score (1-5)" readonly>
+                    <input style="width: 7rem; accent-color: #ff7200;" type="range" list="tickmarks" min="1", max="5"/>
                     <datalist id="tickmarks">
                         <option value="1" data-marker="1"></option>
                         <option value="2" data-marker="2"></option>
@@ -99,7 +100,7 @@
                     </datalist>
                 </div>
                     
-                <button style="width: 200px;" type="submit" formaction="">Filter</button>
+                <button style="width: 10rem;" type="submit" formaction="">Filter</button>
             </form>
         </div>
 

@@ -5,14 +5,21 @@
 }
 
 body{
-    max-width: 100%;
     overflow-x: hidden;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+html{
+    font-size: calc(15px + 0.4vw);
+}
+
+h1{
+    font-size: 1.8rem;
+}
+
 /* The header of the site */
 .header {
-    padding: 10px 20px;
+    padding: 0.5rem 1rem;
     background-color:rgb(204, 163, 83);
     color: black;
     display: flex;
@@ -27,8 +34,13 @@ body{
 }
 
 .logo img{
-    width: 40px;
+    width: 2.1rem;
     align-self: center;
+    transition: 0.4s ease-in-out;
+}
+
+.logo img:hover{
+    transform: rotate(360deg);
 }
 
 .logo h1{
@@ -54,7 +66,7 @@ body{
 }
   
 .navbar li > a{
-    margin-left: 30px;
+    margin-left: 1.5rem;
 }
 
 .dropdown-button:hover{
@@ -63,7 +75,7 @@ body{
 }
 
 .dropdown-button{
-    margin-left: 30px;
+    margin-left: 1.5rem;
     color: black;
     text-decoration: none;
     display: block;
@@ -85,7 +97,7 @@ body{
 }
 
 .dropdown-content p{
-    margin-top: 20px;
+    margin-top: 1rem;
     text-align: center;
 }
   
@@ -97,7 +109,7 @@ body{
 .content {
     background-color:rgb(239, 239, 208);
     min-height: 101vh;
-    padding: 25px 50px; 
+    padding: 0.7rem 1.5rem; 
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -108,16 +120,16 @@ body{
 form input{
     margin: auto;
     display: block;
-    width: 300px;
-    height: 40px;
+    width: 12rem;
+    height: 2rem;
     background: transparent;
     border-bottom: 1px solid #ff7200;
     border-top: none;
     border-right: none;
     border-left: none;
     color: black;
-    font-size: 15px;
-    letter-spacing: 1px;
+    font-size: 0.8rem;
+    letter-spacing: 0.01rem;
 }
 
 form{
@@ -125,7 +137,7 @@ form{
     width: fit-content;
     border-radius: 10px;
     margin: auto;
-    padding: 25px;
+    padding: 1rem;
 }
 
 form input:focus{
@@ -139,12 +151,12 @@ form input:focus{
 button{
     margin: auto;
     display: block;
-    width: 300px;
-    height: 40px;
+    width: 15rem;
+    height: 2rem;
     background: rgb(239, 239, 208);
     border: none;
-    margin-top: 40px;
-    font-size: 18px;
+    margin-top: 2rem;
+    font-size: 1rem;
     border-radius: 10px;
     cursor: pointer;
     color: black;
@@ -157,12 +169,13 @@ button:hover{
 }
 
 textarea{
-    margin-top: 40px;
+    margin-top: 2rem;
     background: rgb(239, 239, 208);
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 20px;
-    font-size: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 1rem;
+    font-size: 0.8rem;
+    width: 80%;
 }
 
 button a{
@@ -178,8 +191,8 @@ option{
 .mentor-item{
     margin: auto;
     padding: 0px;
-    width: 500px;
-    height: 300px;
+    min-width: 19rem;
+    height: 14rem;
     border: 5px solid rgb(204, 163, 83);
     border-radius: 5%;
     display: grid;
@@ -187,12 +200,29 @@ option{
     grid-template-rows: 1fr 1fr;
 }
 
+
+.mentor-item h1{
+    font-size: 1.4rem;
+}
+
+.mentor-item h2{
+    font-size: 1.2rem;
+}
+
+.mentor-item h3{
+    font-size: 1rem;
+}
+
+.mentor-item p, .mentor-item li{
+    font-size: 0.8rem;
+}
+
 .mentor-item img{
     border-radius: 100%;
-    padding-left: 10px;
-    padding-top: 10px;
-    width: 120px;
-    height: 120px;
+    width: 5rem;
+    align-self: center;
+    margin: auto;
+    height: 5rem;
     grid-row: 1/2;
     grid-column: 1/2;
 }
@@ -213,25 +243,25 @@ option{
 }
 
 .mentor-item .personal-info>*{
-    padding-top: 10px;
+    padding-top: 0.5rem;
 }
 
 .mentor-item .availability{
-    padding-top: 10px;
-    padding-left: 10px;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
 }
 
 .mentor-item .availability ul{
-    padding-left: 30px;
+    padding-left: 2rem;
     list-style-type: "📅 ";
 }
 
 /* The mentee item of the site */
 .mentee-item{
-    margin-top: 20px;
-    width: 300px;
+    margin-top: 1rem;
+    min-width: 15rem;
     border: 5px solid rgb(204, 163, 83);
-    padding: 10px;
+    padding: 0.5rem;
     margin: auto;
 }
 
@@ -248,7 +278,7 @@ option{
 }
 
 .mentee-item .mentee-name{
-    padding-left: 10px;
+    padding-left: 0.5rem;
 }
 
 .mentee-item .mentee-name *{
@@ -256,21 +286,21 @@ option{
 }
 
 .mentee-description{
-    padding-top: 30px;
+    padding-top: 1rem;
 }
 
 .mentee-description p{
     border: 1px solid black;
-    padding: 5px
+    padding: 0.3rem;
 }
 
 .date-section{
-    padding-top: 30px;
+    padding-top: 1rem;
     display: flex
 }
 
 .date-section .selected-date{
-    padding-left: 10px;
+    padding-left: 0.5rem;
     font-weight: normal;
 }
 
@@ -281,6 +311,7 @@ option{
 /* The footer of the site */
 .footer{
     text-align: center;
-    height: 25px;
+    height: 1.5rem;
+    font-size: 1rem;
     background-color: rgb(219, 208, 208);
 }
