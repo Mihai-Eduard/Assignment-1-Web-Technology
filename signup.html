@@ -60,6 +60,23 @@
         #language{
             width: 7.5rem;
         }
+
+        input[type="checkbox"]{
+            margin: 0px;
+            width: 1rem;
+            height: 1rem;
+            margin-right: 0.3rem;
+            margin-left: 1rem;
+        }
+
+        .accept-section{
+            display: flex;
+            width: fit-content;
+        }
+
+        .form-section p{
+            font-size: 0.8rem;
+        }
     </style>
 </head>
 <body>
@@ -110,8 +127,13 @@
 
                 <input id="username" type="text" name="username" placeholder="Username"><br>
                 <input type="password" name="password" placeholder="Password"><br>
-                <input type="password" name="confirmpassword" placeholder="Confirm Password"><br>
-
+                <input type="password" name="confirmpassword" placeholder="Confirm Password"><br><br><br>
+     
+                <div class="accept-section">
+                    <input type="checkbox">
+                    <p>Agree to terms and service</p>
+                </div><br>
+                
                 <button type="submit" formaction="main-mentee.html">Sign up just as a MENTEE</button>
                 <button type="submit" formaction="signup-mentor.html">Sign up to be a MENTOR</button>
             </form>

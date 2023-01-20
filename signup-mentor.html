@@ -40,6 +40,23 @@
             border-bottom: none; 
             margin-top: 0px;
         }
+
+        input[type="checkbox"]{
+            margin: 0px;
+            width: 1rem;
+            height: 1rem;
+            margin-right: 0.3rem;
+            margin-left: 1rem;
+        }
+
+        .accept-section{
+            display: flex;
+            width: fit-content;
+        }
+
+        .form-section p{
+            font-size: 0.8rem;
+        }
     </style>
 </head>
 <body>
@@ -81,7 +98,12 @@
                 <input id="documents" type="file" name="files" multiple><br>
 
                 <input id="provide2" type=none name="" placeholder="Please provide a profile picture." readonly><br>
-                <input id="picture" type="file" name="picture"><br><br>
+                <input id="picture" type="file" name="picture"><br><br><br>
+
+                <div class="accept-section">
+                    <input type="checkbox">
+                    <p>Agree to terms and service</p>
+                </div><br>
 
                 <button type="submit" formaction="main-mentor.html">Sign up to be a MENTOR</button>
             </form>
