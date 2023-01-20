@@ -51,6 +51,30 @@
             text-decoration: none;
             color: black;
         }
+
+        #category, #company, #location{
+            width: 8rem;
+            margin-top: 0.5rem;
+        }
+
+        #skill1, #skill2, #skill3{
+            width: 6rem; 
+            margin-top: 0.5rem;
+        }
+
+        #score{
+            width: 5rem; 
+            border-bottom: none;
+        }
+
+        #range{
+            width: 7rem; 
+            accent-color: #ff7200;
+        }
+
+        button{
+            width: 10rem;
+        }
     </style>
 </head>
 <body>
@@ -80,17 +104,17 @@
                 Search Filters
             </h3>
             <form style="margin-top: 1rem;">
-                <input style="width: 8rem; margin-top: 0px;" type="text" name="firstname" placeholder="Job Category">
-                <input style="width: 8rem; margin-top: 0.5rem;" type="text" name="company" placeholder="Company">
-                <input style="width: 8rem; margin-top: 0.5rem;" type="text" name="location" placeholder="Location">
+                <input id="category" type="text" name="firstname" placeholder="Job Category">
+                <input id="company" type="text" name="company" placeholder="Company">
+                <input id="location" type="text" name="location" placeholder="Location"><br>
 
-                <input style="width: 6rem;" type="text" name="skill1" placeholder="Skill1">
-                <input style="width: 6rem; margin-top: 0px;" type="text" name="skill2" placeholder="Skill2">
-                <input style="width: 6rem; margin-top: 0px;" type="text" name="skill3" placeholder="Skill3">
+                <input id="skill1" type="text" name="skill1" placeholder="Skill1">
+                <input id="skill2" type="text" name="skill2" placeholder="Skill2">
+                <input id="skill3" type="text" name="skill3" placeholder="Skill3">
 
                 <div class="review" style="display: flex;">
-                    <input style="width: 5rem; border-bottom: none;" type="text" name="" placeholder="Score (1-5)" readonly>
-                    <input style="width: 7rem; accent-color: #ff7200;" type="range" list="tickmarks" min="1", max="5"/>
+                    <input id="score" type="text" name="" placeholder="Score (1-5)" readonly>
+                    <input id="range" type="range" list="tickmarks" min="1", max="5"/>
                     <datalist id="tickmarks">
                         <option value="1" data-marker="1"></option>
                         <option value="2" data-marker="2"></option>
@@ -100,7 +124,7 @@
                     </datalist>
                 </div>
                     
-                <button style="width: 10rem;" type="submit" formaction="">Filter</button>
+                <button type="submit" formaction="">Filter</button>
             </form>
         </div>
 

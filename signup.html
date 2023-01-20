@@ -36,6 +36,29 @@
             letter-spacing: 0.01rem;
             margin-top: 1rem;
             margin-left: 1rem;
+            width: 7.5rem;
+        }
+
+        #username{
+            margin-top: 2rem;
+        }
+
+        #country, #city, #zipcode{
+            width: 10rem;
+        }
+
+        input[type="none"]{
+            width: 3.5rem;
+            border: none;
+        }
+
+        input[type="date"]{
+            width: 7.5rem; 
+            margin-left: 0px;
+        }
+
+        #language{
+            width: 7.5rem;
         }
     </style>
 </head>
@@ -70,14 +93,14 @@
 
                 <input type="email" name="email" placeholder="Email"><br><br>
 
-                <input style="width: 10rem;" type="text" name="country" placeholder="Country">
-                <input style="width: 10rem;" type="text" name="city" placeholder="City">
-                <input style="width: 10rem;" type="text" name="zipcode" placeholder="ZIP Code"><br>
+                <input id="country" type="text" name="country" placeholder="Country">
+                <input id="city" type="text" name="city" placeholder="City">
+                <input id="zipcode" type="text" name="zipcode" placeholder="ZIP Code"><br>
 
-                <input style="width: 3.5rem;" type=none name="" placeholder="Birthdate:" readonly>
-                <input style="width: 7.5rem; margin-left: 0px;" type="date" name="date">
-                <input style="width: 7.5rem;" type="text" name="language" placeholder="Language">
-                <select style="width: 7.5rem;" name="gender">
+                <input type=none name="" placeholder="Birthdate:" readonly>
+                <input type="date" name="date">
+                <input id="language" type="text" name="language" placeholder="Language">
+                <select name="gender">
                     <option value="" disabled selected>Gender</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
@@ -85,7 +108,7 @@
 
                 <textarea name="description" rows="10" cols="40" placeholder="Please insert a short description about yourself."></textarea><br>
 
-                <input style="margin-top: 2rem;" type="text" name="username" placeholder="Username" maxlength="10"><br>
+                <input id="username" type="text" name="username" placeholder="Username" maxlength="10"><br>
                 <input type="password" name="password" placeholder="Password" minlength="10"><br>
                 <input type="password" name="confirmpassword" placeholder="Confirm Password" minlength="10"><br>
 
