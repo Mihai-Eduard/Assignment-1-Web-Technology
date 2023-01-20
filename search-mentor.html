@@ -53,12 +53,12 @@
         }
 
         #category, #company, #location{
-            width: 8rem;
+            width: 10rem;
             margin-top: 0.5rem;
         }
 
         #skill1, #skill2, #skill3{
-            width: 6rem; 
+            width: 7rem; 
             margin-top: 0.5rem;
         }
 
@@ -104,17 +104,17 @@
                 Search Filters
             </h3>
             <form style="margin-top: 1rem;">
-                <input id="category" type="text" name="category" placeholder="Job Category">
-                <input id="company" type="text" name="company" placeholder="Company">
-                <input id="location" type="text" name="location" placeholder="Location"><br>
+                <input id="category" type="text" name="category" placeholder="Job Category (optional)">
+                <input id="company" type="text" name="company" placeholder="Company (optional)">
+                <input id="location" type="text" name="location" placeholder="Location (optional)"><br>
 
-                <input id="skill1" type="text" name="skill1" placeholder="Skill1">
-                <input id="skill2" type="text" name="skill2" placeholder="Skill2">
-                <input id="skill3" type="text" name="skill3" placeholder="Skill3">
+                <input id="skill1" type="text" name="skill1" placeholder="Skill1 (optional)">
+                <input id="skill2" type="text" name="skill2" placeholder="Skill2 (optional)">
+                <input id="skill3" type="text" name="skill3" placeholder="Skill3 (optional)">
 
                 <div class="review" style="display: flex;">
                     <input id="score" type="text" name="" placeholder="Score (1-5)" readonly>
-                    <input id="range" type="range" list="tickmarks" min="1", max="5"/>
+                    <input id="range" type="range" list="tickmarks" min="1", max="5" value="1"/>
                     <datalist id="tickmarks">
                         <option value="1" data-marker="1"></option>
                         <option value="2" data-marker="2"></option>
