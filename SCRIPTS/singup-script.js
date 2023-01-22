@@ -390,20 +390,63 @@ const checkCheckbox = function(){
 
 //Validate all the input
 const checkAllInput = function(){
-    return checkFirstName() &&
-           checkLastName() &&
-           checkEmail() &&
-           checkCoutry() &&
-           checkCity() &&
-           checkZipcode() &&
-           checkBirthdate() &&
-           checkLanguage() &&
-           checkGender() &&
-           checkDescription() &&
-           checkUsername() &&
-           checkPassword() &&
-           checkConfirmPassword() &&
-           checkCheckbox();
+    if(!checkFirstName()){
+        window.location="#firstname-input";
+        return false;
+    }
+    if(!checkLastName()){
+        window.location="#lastname-input";
+        return false;
+    }
+    if(!checkEmail()){
+        window.location="#email-input";
+        return false;
+    }
+    if(!checkCoutry()){
+        window.location="#country-input";
+        return false;
+    }
+    if(!checkCity()){
+        window.location="#city-input";
+        return false;
+    }
+    if(!checkZipcode()){
+        window.location="#zipcode-input";
+        return false;
+    }
+    if(!checkBirthdate()){
+        window.location="#birthdate-input";
+        return false;
+    }
+    if(!checkLanguage()){
+        window.location="#language-input";
+        return false;
+    }
+    if(!checkGender()){
+        window.location="#gender-input";
+        return false;
+    }
+    if(!checkDescription()){
+        window.location="#description-input";
+        return false;
+    }
+    if(!checkUsername()){
+        window.location="#username-input";
+        return false;
+    }
+    if(!checkPassword()){
+        window.location="#password-input";
+        return false;
+    }
+    if(!checkConfirmPassword()){
+        window.location="#confirmpassword-input";
+        return false;
+    }
+    if(!checkCheckbox()){
+        window.location="#checkbox-input";
+        return false;
+    }
+    return true;
 }
 
 

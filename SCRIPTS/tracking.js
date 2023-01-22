@@ -83,6 +83,7 @@ buttonMentee.addEventListener("click",function(event){
         setMouseClicks(event);
         setKeysPressed();
         setCharactersTyped();
+        window.location="#results-section";
     }
 });
 buttonMentor.addEventListener("click",function(event){
@@ -93,5 +94,6 @@ buttonMentor.addEventListener("click",function(event){
         setMouseClicks(event);
         setKeysPressed();
         setCharactersTyped();
+        window.location="#results-section";
     }
 });
