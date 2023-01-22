@@ -7,6 +7,7 @@ let trackingSection=document.getElementsByClassName('tracking');
 let inputSections=document.getElementsByTagName('input');
 let textareaSections=document.getElementsByTagName('textarea');
 let selectSections=document.getElementsByTagName('select');
+let buttonSections=document.getElementsByTagName('button');
 
 let mouseClicks=0;
 let initialTime=Date.now();
@@ -38,7 +39,7 @@ const setKeysPressed = function(){
 const setCharactersTyped = function(){
     charactersTyped=0;
     for(let i=0;i<inputSections.length;i++){
-        if(inputSections[i].type!="checkbox")
+        if(inputSections[i].type!="checkbox" && inputSections[i].type!="file")
             charactersTyped+=inputSections[i].value.length;
     }
     for(let i=0;i<textareaSections.length;i++){
@@ -75,25 +76,16 @@ for(let i=0;i<selectSections.length;i++){
 
 
 //Adding functionality to the submit buttons
-buttonMentee.addEventListener("click",function(event){
-    event.preventDefault();
-    if(checkAllInput()){
-        trackingSection[0].setAttribute("style","display:block;");
-        setTotalTime();
-        setMouseClicks(event);
-        setKeysPressed();
-        setCharactersTyped();
-        window.location="#results-section";
-    }
-});
-buttonMentor.addEventListener("click",function(event){
-    event.preventDefault();
-    if(checkAllInput()){
-        trackingSection[0].setAttribute("style","display:block;");
-        setTotalTime();
-        setMouseClicks(event);
-        setKeysPressed();
-        setCharactersTyped();
-        window.location="#results-section";
-    }
-});
+for(let i=0;i<buttonSections.length;i++){
+    buttonSections[i].addEventListener("click",function(event){
+        event.preventDefault();
+        if(checkAllInput()){
+            trackingSection[0].setAttribute("style","display:block;");
+            setTotalTime();
+            setMouseClicks(event);
+            setKeysPressed();
+            setCharactersTyped();
+            window.location="#results-section";
+        }
+    })
+}

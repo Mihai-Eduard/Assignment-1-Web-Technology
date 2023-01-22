@@ -7,6 +7,8 @@
     <title>Sign Up Mentor</title>
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="SCRIPTS/signup-mentor-script.js" defer></script>
+    <script src="SCRIPTS/tracking.js" defer></script>
 
     <style>
         /* The form of the  */
@@ -18,16 +20,12 @@
         form input{
             display: inline;
             margin-top: 1rem;
-            margin-left: 1rem;
+            margin-left: 0px;
         }
 
         #skills{
             border-bottom: none; 
             margin-top: 4rem;
-        }
-
-        #skill1, #skill2, #skill3{
-            width: 10rem;
         }
 
         #provide1, #provide2{
@@ -36,26 +34,66 @@
             margin-top: 4rem;
         }
 
-        #picture, #documents{
-            border-bottom: none; 
-            margin-top: 0px;
-        }
-
         input[type="checkbox"]{
             margin: 0px;
             width: 1rem;
             height: 1rem;
             margin-right: 0.3rem;
-            margin-left: 1rem;
         }
 
-        .accept-section{
+        .checkbox-section{
             display: flex;
             width: fit-content;
         }
 
         .form-section p{
             font-size: 0.8rem;
+        }
+
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover, 
+        input:-webkit-autofill:focus, 
+        input:-webkit-autofill:active{
+            -webkit-box-shadow: 0 0 0 30px rgb(225, 211, 182) inset !important;
+        }
+
+        .form-input{
+            margin-left: 1rem;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        #picture-input, #documents-input{
+            border: none;
+        }
+
+        #mentoringfield-input, #company-input,
+        #mentoringfield-text, #company-text{
+            width: 12rem;
+        }
+
+        #skill1-input, #skill2-input, #skill3-input,
+        #skill1-text, #skill2-text, #skill3-text{
+            width: 10rem;
+        }
+
+        #picture-text, #documents-text, #checkbox-text{
+            width: 11rem;
+        }
+
+        .tracking{ 
+            display: none;
+            margin: auto;
+            text-align: center;
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+            padding: 1rem;
+            border: 5px solid rgb(204, 163, 83);
+            width: fit-content;
+        }
+
+        .tracking p{
+            padding: 0.1rem;
         }
     </style>
 </head>
@@ -79,34 +117,72 @@
         </ul>
     </div>
 
-    <div class="content">
+    <div class="content" style="display: block;">
         <div class="form-section">
             <h1 style="text-align: center; padding-bottom: 0.5rem;">
                 Join our team of mentors!
             </h1>
             <form>
-                <input type="text" name="mentoringfield" placeholder="Mentoring Field">
-                <input type="text" name="company" placeholder="Company (optional)"><br>
-
-                <input id="skills" type="none" name="" placeholder="Your most imprtant skills:" readonly><br>
-
-                <input id="skill1" type="text" name="skill1" placeholder="Skill1">
-                <input id="skill2" type="text" name="skill2" placeholder="Skill2 (optional)">
-                <input id="skill3" type="text" name="skill3" placeholder="Skill3 (optional)"><br>
-
-                <input id="provide1" type=none name="" placeholder="Please provide documents to support your skills." readonly><br>
-                <input id="documents" type="file" name="files" multiple><br>
-
-                <input id="provide2" type=none name="" placeholder="Please provide a profile picture." readonly><br>
-                <input id="picture" type="file" name="picture"><br><br><br>
-
-                <div class="accept-section">
-                    <input type="checkbox">
-                    <p>Agree to terms and service</p>
+                <div class="form-input">
+                    <input id="mentoringfield-input" type="text" name="mentoringfield" placeholder="Mentoring Field">
+                    <p id="mentoringfield-text"></p>
+                </div>
+                <div class="form-input">
+                    <input id="company-input" type="text" name="company" placeholder="Company (optional)">
+                    <p id="company-text"></p>
                 </div><br>
 
-                <button type="submit" formaction="main-mentor.html">Sign up to be a MENTOR</button>
+                <div class="form-input">
+                    <input id="skills" type="none" name="" placeholder="Your most imprtant skills:" readonly>
+                </div><br>
+
+                <div class="form-input">
+                    <input id="skill1-input" type="text" name="skill1" placeholder="Skill1">
+                    <p id="skill1-text"></p>
+                </div>
+                <div class="form-input">
+                    <input id="skill2-input" type="text" name="skill2" placeholder="Skill2 (optional)">
+                    <p id="skill2-text"></p>
+                </div>
+                <div class="form-input">
+                    <input id="skill3-input" type="text" name="skill3" placeholder="Skill3 (optional)">
+                    <p id="skill3-text"></p>
+                </div><br>
+
+                <div class="form-input">
+                    <input id="provide1" type=none name="" placeholder="Please provide documents to support your skills." readonly>
+                </div><br>
+                <div class="form-input">
+                    <input id="documents-input" type="file" name="files" multiple>
+                    <p id="documents-text"></p>
+                </div><br>
+
+                <div class="form-input">
+                    <input id="provide2" type=none name="" placeholder="Please provide a profile picture." readonly>
+                </div><br>
+                <div class="form-input">
+                    <input id="picture-input" type="file" name="picture">
+                    <p id="picture-text"></p>
+                </div><br><br><br>
+
+                <div class="form-input">
+                    <div class="checkbox-section">
+                        <input id="checkbox-input" type="checkbox">
+                        <p>Agree to terms and service</p>
+                    </div>
+                    <p id="checkbox-text"></p>
+                </div><br>
+
+                <button id="button-mentor">Sign up to be a MENTOR</button>
             </form>
+        </div>
+
+        <div class="tracking" id="results-section">
+            <p style="color: #008000;">✔️The form is completed correctly!</p>
+            <p>➡Total number of mouse click: <span id="mouse-clicks">XX</span></p>
+            <p>➡Total time spent: <span id="total-time">XX</span></p>
+            <p>➡Total keys pressed: <span id="keys-pressed">XX</span></p>
+            <p>➡Total number of characters typed: <span id="characters-typed">XX</span></p>
         </div>
     </div>
 
