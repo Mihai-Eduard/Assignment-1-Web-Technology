@@ -7,6 +7,7 @@
     <title>Index</title>
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="SCRIPTS/index-script.js" defer></script>
 
     <style>
         /* The description of the content */
@@ -52,6 +53,10 @@
         form .link-signup a{
             text-decoration: none;
             color: rgb(204, 163, 83);
+        }
+
+        #username-text, #password-text{
+            text-align: center;
         }
     </style>
 </head>
@@ -110,10 +115,16 @@
 
         <div class="form-section">
             <form>
-                <input type="text" name="username" placeholder="Username">
-                <input type="password" name="password" placeholder="Password">
+                <div class="form-input">
+                    <input id="username-input" type="text" name="username" placeholder="Username">
+                    <p id="username-text"></p>
+                </div>
+                <div class="form-input">
+                    <input id="password-input" type="password" name="password" placeholder="Password">
+                    <p id="password-text"></p>
+                </div>
                 
-                <button type="submit" formaction="main-mentee.html">Log in</button>
+                <button id="button-login">Log in</button>
 
                 <p class="link-signup">Don't have an account yet?<br>
                 Sign up <a href="signup.html"> here</a></p>

@@ -451,7 +451,7 @@ const checkAllInput = function(){
 
 
 
-// The parte dedicated to the event listeners
+//The parte dedicated to the event listeners
 firstNameInput.addEventListener("focusout",checkFirstName);
 lastNameInput.addEventListener("focusout",checkLastName);
 emailInput.addEventListener("focusout",checkEmail);
