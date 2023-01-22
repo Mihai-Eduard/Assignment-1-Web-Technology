@@ -16,7 +16,6 @@ const PASSWORD_DIGIT="❌Must contain at least a digit!";
 const PASSWORD_SPECIAL="❌Must contain at least a special character!";
 const CHECKBOX_WRONG="❌You must agree with the terms and service!";
 
-
 let firstNameInput=document.getElementById('firstname-input');
 let firstNameText=document.getElementById('firstname-text');
 
@@ -67,7 +66,7 @@ let buttonMentor=document.getElementById('button-mentor');
 
 
 //Validating or disproving of a field
-//Setting the bacground and the text
+//Setting the background and the corresponding text
 const validate_field = function(elementBorder, elementText){
     elementBorder.style.borderBottom="2px solid #008000"
     elementText.innerText=VALIDATION_TEXT;
@@ -423,14 +422,3 @@ descriptionInput.addEventListener("focusout",checkDescription);
 usernameInput.addEventListener("focusout",checkUsername);
 passwordInput.addEventListener("focusout",checkPassword);
 confirmPasswordInput.addEventListener("focusout",checkConfirmPassword);
-
-buttonMentee.addEventListener("click",function(event){
-    event.preventDefault();
-    if(checkAllInput())
-        console.log('hi');
-});
-buttonMentor.addEventListener("click",function(event){
-    event.preventDefault();
-    if(checkAllInput())
-        console.log('hi');
-});

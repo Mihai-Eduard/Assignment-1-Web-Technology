@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="SCRIPTS/singup-script.js" defer></script>
+    <script src="SCRIPTS/tracking.js" defer></script>
 
     <style>
         /* The form of the  */
@@ -130,6 +131,21 @@
         #gender-input, #gender-text{
             width: 7.5rem;
         }
+
+        .tracking{
+            display: none;
+            margin: auto;
+            text-align: center;
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+            padding: 1rem;
+            border: 5px solid rgb(204, 163, 83);
+            width: fit-content;
+        }
+
+        .tracking p{
+            padding: 0.1rem;
+        }
     </style>
 </head>
 <body>
@@ -152,7 +168,7 @@
         </ul>
     </div>
 
-    <div class="content">
+    <div class="content" style="display: block;">
         <div class="form-section">
             <h1 style="text-align: center;">
                 Join our community!
@@ -234,6 +250,13 @@
                 <button id="button-mentee">Sign up just as a MENTEE</button>
                 <button id="button-mentor">Sign up to be a MENTOR</button>
             </form>
+        </div>
+
+        <div class="tracking">
+            <p>➡Total number of mouse click: <span id="mouse-clicks">XX</span></p>
+            <p>➡Total time spent: <span id="total-time">XX</span></p>
+            <p>➡Total keys pressed: <span id="keys-pressed">XX</span></p>
+            <p>➡Total number of characters typed: <span id="characters-typed">XX</span></p>
         </div>
     </div>
 
