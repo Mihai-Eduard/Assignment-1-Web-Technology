@@ -67,6 +67,7 @@ const checkCapitalLetter = function(value){
     return false;
 }
 const checkEmpty = function(value){
+    value=value.trim();
     if(value.length==0)
         return true;
     return false;
