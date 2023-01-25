@@ -1,4 +1,4 @@
-//The part dedicated to the delcarations and initialisations
+//The part dedicated to the declarations and initialisations
 const USERNAME_WRONG="❌The username is not registered!";
 const PASSWORD_WRONG="❌The password is incorrect!";
 

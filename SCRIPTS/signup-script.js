@@ -1,4 +1,4 @@
-//The part dedicated to the delcarations and initialisations
+//The part dedicated to the declarations and initialisations
 const VALIDATION_TEXT="✔️Looks good!";
 const REQUIRE_FIELD="❌Please fill in this field!";
 const APLHABET_ONLY="❌Must contain only the alphabet!";
