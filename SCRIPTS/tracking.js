@@ -1,4 +1,4 @@
-//The part dedicated to the delcarations and initialisations
+//The part dedicated to the declarations and initialisations
 let mouseClicksInput=document.getElementById('mouse-clicks');
 let totalTimeInput=document.getElementById('total-time');
 let keysPressedInput=document.getElementById('keys-pressed');
